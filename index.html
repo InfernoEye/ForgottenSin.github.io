@@ -4,7 +4,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 
 body{
-  min-height:100vh;
+  min-height:100dvh;
   background:#0a0012;
   display:flex;
   align-items:center;
@@ -66,14 +66,14 @@ body{
   transform:translate(-50%,-50%);
   z-index:2;
   pointer-events:none;
+  width:min(600px,95vw);height:min(600px,95vw);
 }
 .ring{
   position:absolute;
   border-radius:50%;
-  top:50%;left:50%;
-  margin-top:-240px;margin-left:-240px;
+  inset:0;margin:auto;
   opacity: 0;
-  width:480px;height:480px;
+  width:min(480px,90vw);height:min(480px,90vw);
   animation:hb-ring 13s cubic-bezier(.25,.46,.45,.94) infinite;
 }
 .ring::before{
@@ -82,9 +82,8 @@ body{
   box-shadow:0 0 30px rgba(0,255,255,.15),0 0 80px rgba(0,255,255,.06);
 }
 .ring:nth-child(2){
-  margin-top:-300px;margin-left:-300px;
   opacity: 0;
-  width:600px;height:600px;
+  width:min(600px,95vw);height:min(600px,95vw);
   animation-delay:.5s;
 }
 .ring:nth-child(2)::before{
